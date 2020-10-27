@@ -1,0 +1,6 @@
+include ':mamba-ui'
+include ':mamba-base'
+include ':mamba-util'
+include ':mamba-fps'
+include ':app'
+rootProject.name = "Mamba"
