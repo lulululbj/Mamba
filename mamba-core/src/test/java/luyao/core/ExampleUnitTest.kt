@@ -1,4 +1,4 @@
-package luyao.mamba.ui
+package luyao.core
 
 import org.junit.Test
 

@@ -7,11 +7,30 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/fpsBt"
+        android:id="@+id/sleep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/fps"
+        android:layout_margin="10dp"
+        android:text="Sleep 1s"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/startFps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/start_fps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sleep"/>
+
+    <Button
+        android:id="@+id/stopFps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/stop_fps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startFps"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

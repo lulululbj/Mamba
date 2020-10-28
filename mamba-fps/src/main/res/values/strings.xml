@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="fps">Fps</string>
+    <string name="start_fps">Start Monitor Fps</string>
+    <string name="stop_fps">Stop Monitor Fps</string>
 </resources>

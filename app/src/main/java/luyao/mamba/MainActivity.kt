@@ -1,13 +1,24 @@
 package luyao.mamba
 
-import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import luyao.mamba.base.MambaBaseActivity
-import luyao.mamba.fps.FpsViewActivity
+import luyao.core.MambaManager
 
-class MainActivity : MambaBaseActivity(R.layout.activity_main) {
 
-    override fun initView() {
-        fpsBt.setOnClickListener { startActivity(Intent(this,FpsViewActivity::class.java)) }
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        MambaManager.init(this)
+        initListener()
     }
+
+    private fun initListener() {
+        sleep.setOnClickListener { Thread.sleep(1000) }
+        startFps.setOnClickListener { MambaManager.startMonitorFps() }
+        stopFps.setOnClickListener { MambaManager.stopMonitorFps() }
+    }
+
 }
